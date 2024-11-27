@@ -126,7 +126,7 @@ class MissingDependenciesError(DependencyError):
         self.extra_dependencies = sorted(extra_dependencies)
         extra_deps_str = ", ".join(self.extra_dependencies)
         super().__init__(
-            f"Some dependencies were not included in requirements files. {extra_deps_str}",
+            f"Some dependencies were not included in requirements files. DEPS: {extra_deps_str=}",
             details=f"Missing dependencies: {extra_deps_str}",
             resolution="Ensure all missing dependencies are included in a requirements file.",
             # TODO: Docs URL
